@@ -1,5 +1,6 @@
 package project.achsan.quotesapps.presenters
 
+import android.util.Log
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import project.achsan.quotesapps.`interface`.MainView
@@ -149,6 +150,7 @@ CoroutineContextProvider = CoroutineContextProvider()
                 NetworkBuilder().services.login(nim,password).enqueue(object :
                     Callback<Login> {
                     override fun onResponse(call: Call<Login>, response: Response<Login>) {
+                        Log.d("response api:", response.toString())
                         if(response.code()==200){
                             response.body()?.let { it1 -> view.resultLogin(it1) }
                             view.showMessage("Login Berhasil")

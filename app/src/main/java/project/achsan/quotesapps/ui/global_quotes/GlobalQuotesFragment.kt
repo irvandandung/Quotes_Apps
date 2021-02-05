@@ -1,4 +1,4 @@
-package project.achsan.quotesapps.ui.dashboard
+package project.achsan.quotesapps.ui.global_quotes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import project.achsan.quotesapps.R
 
-class DashboardFragment : Fragment() {
+class GlobalQuotesFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var globalQuotesModel: GlobalQuotesModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        globalQuotesModel =
+                ViewModelProvider(this).get(GlobalQuotesModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_global_quotes, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        globalQuotesModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

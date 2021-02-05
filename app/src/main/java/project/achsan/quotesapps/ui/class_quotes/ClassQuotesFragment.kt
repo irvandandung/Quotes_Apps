@@ -1,4 +1,4 @@
-package project.achsan.quotesapps.ui.home
+package project.achsan.quotesapps.ui.class_quotes
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import project.achsan.quotesapps.R
 
-class HomeFragment : Fragment() {
+class ClassQuotesFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var classQuotesModel: ClassQuotesModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProvider(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        classQuotesModel =
+                ViewModelProvider(this).get(ClassQuotesModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_class_quotes, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        classQuotesModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

@@ -3,6 +3,7 @@ package project.achsan.quotesapps.data.remote
 import android.app.Application
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import project.achsan.quotesapps.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="project.achsan.quotesapps.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="project.achsan.quotesapps.ui.class_quotes.ClassQuotesFragment"
+        android:label="Class Quotes"
+        tools:layout="@layout/fragment_class_quotes" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="project.achsan.quotesapps.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="project.achsan.quotesapps.ui.my_quotes.MyQuotesFragment"
+        android:label="My Quotes"
+        tools:layout="@layout/fragment_my_quotes" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="project.achsan.quotesapps.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:name="project.achsan.quotesapps.ui.global_quotes.GlobalQuotesFragment"
+        android:label="Global Quotes"
+        tools:layout="@layout/fragment_global_quotes" />
 </navigation>

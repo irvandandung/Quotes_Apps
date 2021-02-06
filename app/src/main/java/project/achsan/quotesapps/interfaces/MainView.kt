@@ -1,4 +1,4 @@
-package project.achsan.quotesapps.`interface`
+package project.achsan.quotesapps.interfaces
 
 import project.achsan.quotesapps.models.Login
 import project.achsan.quotesapps.models.Quote

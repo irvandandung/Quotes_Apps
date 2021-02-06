@@ -3,7 +3,7 @@ package project.achsan.quotesapps.presenters
 import android.util.Log
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import project.achsan.quotesapps.`interface`.MainView
+import project.achsan.quotesapps.interfaces.MainView
 import project.achsan.quotesapps.data.remote.NetworkBuilder
 import project.achsan.quotesapps.models.Login
 import project.achsan.quotesapps.models.Message

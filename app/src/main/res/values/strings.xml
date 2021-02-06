@@ -4,4 +4,11 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="logout">Logout</string>
+    <string name="title">Title</string>
+    <string name="category">Category</string>
+    <string name="description">Deskripsi</string>
+    <string name="date">00-00-0000</string>
+    <string name="class_quotes">Class Quotes</string>
+    <string name="my_quotes">My Quotes</string>
+    <string name="global_quotes">Global Quotes</string>
 </resources>

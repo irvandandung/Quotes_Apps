@@ -1,5 +1,6 @@
 package project.achsan.quotesapps.data.remote
 
+import project.achsan.quotesapps.BuildConfig
 import project.achsan.quotesapps.models.Login
 import project.achsan.quotesapps.models.Message
 import project.achsan.quotesapps.models.QuoteResponse
@@ -13,34 +14,34 @@ interface ApiServices {
         @Field("registration_number") nim: String,
         @Field("password") password: String
     ): Call<Login>
-    @GET("api/v1/myquotes")
+    @GET("${BuildConfig.API_VERSION}myquotes")
     fun getMyQuotes(
         @Header("Authorization") token:String?
     ): Call<QuoteResponse>
-    @GET("api/v1/class_quotes")
+    @GET("${BuildConfig.API_VERSION}class_quotes")
     fun getClassQuotes(
         @Header("Authorization") token:String?
     ): Call<QuoteResponse>
-    @GET("api/v1/quotes")
+    @GET("${BuildConfig.API_VERSION}quotes")
     fun getAllQuotes(
         @Header("Authorization") token:String?
     ): Call<QuoteResponse>
     @FormUrlEncoded
-    @POST("api/v1/quotes")
+    @POST("${BuildConfig.API_VERSION}quotes")
     fun addQuote(
         @Header("Authorization") token:String,
         @Field("name") name: String,
         @Field("description") description: String
     ): Call<Message>
     @FormUrlEncoded
-    @PUT("api/v1/quotes/{quote_id}")
+    @PUT("${BuildConfig.API_VERSION}quotes/{quote_id}")
     fun updateQuote(
         @Header("Authorization") token:String,
         @Path("quote_id") quote_id: String,
         @Field("name") title: String,
         @Field("description") description: String
     ): Call<Message>
-    @DELETE("api/v1/quotes/{quote_id}")
+    @DELETE("${BuildConfig.API_VERSION}quotes/{quote_id}")
     fun deleteQuote(
         @Header("Authorization") token:String,
         @Path("quote_id") quote_id: String

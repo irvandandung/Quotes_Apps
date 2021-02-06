@@ -1,5 +1,6 @@
 package project.achsan.quotesapps.ui.my_quotes
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -17,8 +18,10 @@ import project.achsan.quotesapps.models.Login
 import project.achsan.quotesapps.models.Quote
 import project.achsan.quotesapps.models.Token
 import project.achsan.quotesapps.presenters.MainPresenter
+import project.achsan.quotesapps.ui.QuoteAddUpdateActivity
 import project.achsan.quotesapps.utils.CoroutineContextProvider
 import project.achsan.quotesapps.utils.TokenPref
+import project.achsan.quotesapps.utils.helper.REQUEST_ADD
 
 class MyQuotesFragment : Fragment(), MainView {
     private lateinit var tokenPref : TokenPref
@@ -46,6 +49,11 @@ class MyQuotesFragment : Fragment(), MainView {
         swiperefresh.onRefresh {
             progressbar.visibility = View.INVISIBLE
             presenter.getMyQuotes(token.token)
+        }
+        binding.fab.setOnClickListener {
+            val intent = Intent(requireActivity(),
+                QuoteAddUpdateActivity::class.java)
+            startActivityForResult(intent, REQUEST_ADD)
         }
     }
 

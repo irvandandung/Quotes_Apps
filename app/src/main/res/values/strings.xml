@@ -11,4 +11,6 @@
     <string name="class_quotes">Class Quotes</string>
     <string name="my_quotes">My Quotes</string>
     <string name="global_quotes">Global Quotes</string>
+    <string name="submit">Submit</string>
+    <string name="Hapus">Hapus</string>
 </resources>

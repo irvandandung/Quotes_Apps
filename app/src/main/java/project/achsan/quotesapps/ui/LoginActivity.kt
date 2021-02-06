@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.Toast
 import project.achsan.quotesapps.MainActivity
 import project.achsan.quotesapps.R
-import project.achsan.quotesapps.`interface`.MainView
+import project.achsan.quotesapps.interfaces.MainView
 import project.achsan.quotesapps.databinding.ActivityLoginBinding
 import project.achsan.quotesapps.models.Login
 import project.achsan.quotesapps.models.Quote
